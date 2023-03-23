@@ -9,7 +9,7 @@ namespace Proyecto25AM
 {
     public class startup
     {
-        private readonly string _Mis_politicas = "MyCors";
+        private readonly string PolicyCors = "PolicyCors";
         public startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,14 +26,15 @@ namespace Proyecto25AM
             services.AddSwaggerGen();
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            //PolicyCors
             services.AddCors(options =>
             {
-                options.AddPolicy(name: _Mis_politicas, builder =>
-                {
-                    //builder.WithOrigins("www.panchito.com");
+                options.AddPolicy(name: PolicyCors, 
+                    builder =>
+                    {
                     builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
                     .AllowAnyHeader().AllowAnyMethod();
-                });
+                    });
             });
 
             //Inyeccion de dependencias
@@ -59,6 +60,9 @@ namespace Proyecto25AM
 
             app.UseHttpsRedirection();
             app.UseRouting();
+
+            app.UseAuthorization();
+            app.UseCors(PolicyCors);
 
             app.UseAuthentication();
             app.UseEndpoints(endpoints =>
