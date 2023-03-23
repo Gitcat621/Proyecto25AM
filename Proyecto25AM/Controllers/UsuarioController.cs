@@ -16,7 +16,7 @@ namespace Proyecto25AM.Controllers
             _usuarioServices = usuarioServices;
         }
 
-        [HttpPost]
+        [HttpPost("Crear")]
         public async Task<IActionResult> Crear([FromBody] UsuarioResponse i)
         {
             return Ok(await _usuarioServices.CrearUsuario(i));
@@ -28,7 +28,7 @@ namespace Proyecto25AM.Controllers
             return Ok (await _usuarioServices.GetUsers());
         }
 
-        [HttpPut]
+        [HttpPut("Editar/{ID}")]
         public async Task<IActionResult> EditUser([FromBody]UsuarioResponse request, int Id)
         {
             return Ok(await _usuarioServices.EditUser(request, Id));
@@ -40,7 +40,7 @@ namespace Proyecto25AM.Controllers
             return Ok(await _usuarioServices.GetUserbyID(Id));
         }
 
-        [HttpDelete]
+        [HttpDelete("Borrar/{ID}")]
         public async Task<IActionResult> DeleteUser(int Id)
         {
             return Ok(await _usuarioServices.DeleteUser(Id));
