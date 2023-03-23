@@ -1,0 +1,70 @@
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.dll
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.pdb
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.dll
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.pdb
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
+C:\Users\Upqroo\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\ref\Domain.dll
+D:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+D:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.dll
+D:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.pdb
+D:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.dll
+D:\Proyecto25AM\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.pdb
+D:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
+D:\Proyecto25AM\Domain\obj\Debug\net6.0\ref\Domain.dll
+F:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.deps.json
+F:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+F:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.dll
+F:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.pdb
+F:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+F:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+F:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+F:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+F:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.dll
+F:\Proyecto25AM\Domain\obj\Debug\net6.0\refint\Domain.dll
+F:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.pdb
+F:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
+F:\Proyecto25AM\Domain\obj\Debug\net6.0\ref\Domain.dll
+E:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.deps.json
+E:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+E:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.dll
+E:\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.pdb
+E:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+E:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+E:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+E:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+E:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.dll
+E:\Proyecto25AM\Domain\obj\Debug\net6.0\refint\Domain.dll
+E:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.pdb
+E:\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
+E:\Proyecto25AM\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.dll
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\bin\Debug\net6.0\Domain.pdb
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.dll
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.pdb
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
+C:\Users\PC 600\Desktop\Proyecto25AM\Domain\obj\Debug\net6.0\ref\Domain.dll
