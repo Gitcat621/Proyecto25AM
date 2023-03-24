@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "42Ym4GKi7GgoFIHXCfEMJwXMvJ+BNV4EY6hQj6r7Wr8+AEoZtjEa9wcb5WUlv+ceg3mDvDofVyxnDBfF0ietNg==",
+  "dgSpecHash": "ydF9F86cttRnxA9e3inCCln/NXWfnZwpgcihc8ozyCxYnUBZpzu+hyVobQB8z4fvi+cKlC58gKXTKgFKNBUDFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Upqroo\\Source\\Repos\\Proyecto25AM\\Proyecto25AM\\Proyecto25AM.csproj",
+  "projectFilePath": "C:\\Users\\Upqroo\\OneDrive\\Escritorio\\25AM\\Proyecto25AM\\Proyecto25AM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Upqroo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Upqroo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

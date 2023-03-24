@@ -3524,11 +3524,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Upqroo\\Source\\Repos\\Proyecto25AM\\Proyecto25AM\\Proyecto25AM.csproj",
+      "projectUniqueName": "C:\\Users\\Upqroo\\OneDrive\\Escritorio\\25AM\\Proyecto25AM\\Proyecto25AM.csproj",
       "projectName": "Proyecto25AM",
-      "projectPath": "C:\\Users\\Upqroo\\Source\\Repos\\Proyecto25AM\\Proyecto25AM\\Proyecto25AM.csproj",
+      "projectPath": "C:\\Users\\Upqroo\\OneDrive\\Escritorio\\25AM\\Proyecto25AM\\Proyecto25AM.csproj",
       "packagesPath": "C:\\Users\\Upqroo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Upqroo\\Source\\Repos\\Proyecto25AM\\Proyecto25AM\\obj\\",
+      "outputPath": "C:\\Users\\Upqroo\\OneDrive\\Escritorio\\25AM\\Proyecto25AM\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Upqroo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3545,8 +3545,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Upqroo\\Source\\Repos\\Proyecto25AM\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Upqroo\\Source\\Repos\\Proyecto25AM\\Domain\\Domain.csproj"
+            "C:\\Users\\Upqroo\\OneDrive\\Escritorio\\25AM\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Upqroo\\OneDrive\\Escritorio\\25AM\\Domain\\Domain.csproj"
             }
           }
         }
