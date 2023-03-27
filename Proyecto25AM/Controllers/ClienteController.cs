@@ -16,7 +16,7 @@ namespace Proyecto25AM.Controllers
             _clienteServices = clienteServices;
         }
 
-        [HttpPost]
+        [HttpPost("Crear")]
         public async Task<IActionResult> Crear([FromBody] ClienteResponse i)
         {
             return Ok(await _clienteServices.NuevoCliente(i));
@@ -28,19 +28,19 @@ namespace Proyecto25AM.Controllers
             return Ok(await _clienteServices.ObtenerCliente());
         }
 
-        [HttpPut]
+        [HttpPut("Editar/{ID}")]
         public async Task<IActionResult> EditarCliente([FromBody] ClienteResponse request, int Id)
         {
             return Ok(await _clienteServices.EditarCliente(request, Id));
         }
 
-        [HttpGet("BuscarPorID")]
+        [HttpGet("ByID/{ID}")]
         public async Task<IActionResult> ClientePorID(int Id)
         {
             return Ok(await _clienteServices.ClientePorID(Id));
         }
 
-        [HttpDelete]
+        [HttpDelete("Borrar/{ID}")]
         public async Task<IActionResult> BorrarCliente(int Id)
         {
             return Ok(await _clienteServices.BorrarCliente(Id));

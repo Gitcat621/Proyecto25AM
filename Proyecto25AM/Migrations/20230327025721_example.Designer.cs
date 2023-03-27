@@ -12,8 +12,8 @@ using Proyecto25AM.Context;
 namespace Proyecto25AM.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230307124205_sample")]
-    partial class sample
+    [Migration("20230327025721_example")]
+    partial class example
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,11 +27,11 @@ namespace Proyecto25AM.Migrations
 
             modelBuilder.Entity("Domain.Entities.Cliente", b =>
                 {
-                    b.Property<int>("ID_Cliente")
+                    b.Property<int>("PkCliente")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID_Cliente"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PkCliente"));
 
                     b.Property<string>("Apellidos")
                         .IsRequired()
@@ -53,35 +53,35 @@ namespace Proyecto25AM.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID_Cliente");
+                    b.HasKey("PkCliente");
 
                     b.ToTable("Clientes");
                 });
 
             modelBuilder.Entity("Domain.Entities.Departamento", b =>
                 {
-                    b.Property<int>("ID_Departamento")
+                    b.Property<int>("PkDepartamento")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID_Departamento"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PkDepartamento"));
 
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID_Departamento");
+                    b.HasKey("PkDepartamento");
 
                     b.ToTable("Departamentos");
                 });
 
             modelBuilder.Entity("Domain.Entities.Empleado", b =>
                 {
-                    b.Property<int>("ID_Empleado")
+                    b.Property<int>("PkEmpleado")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID_Empleado"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PkEmpleado"));
 
                     b.Property<string>("Apellidos")
                         .IsRequired()
@@ -95,36 +95,38 @@ namespace Proyecto25AM.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("IDPuesto")
+                    b.Property<int?>("FkDepartamento")
                         .HasColumnType("int");
 
-                    b.Property<int?>("IdDepartamento")
+                    b.Property<int?>("FkPuesto")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID_Empleado");
+                    b.HasKey("PkEmpleado");
 
-                    b.HasIndex("IdDepartamento");
+                    b.HasIndex("FkDepartamento");
+
+                    b.HasIndex("FkPuesto");
 
                     b.ToTable("Empleados");
                 });
 
             modelBuilder.Entity("Domain.Entities.Factura", b =>
                 {
-                    b.Property<int>("NoFactura")
+                    b.Property<int>("PkFactura")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NoFactura"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PkFactura"));
 
                     b.Property<string>("Fecha")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("IDCliente")
+                    b.Property<int?>("FkCliente")
                         .HasColumnType("int");
 
                     b.Property<string>("RFC")
@@ -135,65 +137,62 @@ namespace Proyecto25AM.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("clienteID_Cliente")
-                        .HasColumnType("int");
+                    b.HasKey("PkFactura");
 
-                    b.HasKey("NoFactura");
-
-                    b.HasIndex("clienteID_Cliente");
+                    b.HasIndex("FkCliente");
 
                     b.ToTable("Facturas");
                 });
 
             modelBuilder.Entity("Domain.Entities.Puesto", b =>
                 {
-                    b.Property<int>("ID_Puesto")
+                    b.Property<int>("PkPuesto")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID_Puesto"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PkPuesto"));
 
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID_Puesto");
+                    b.HasKey("PkPuesto");
 
                     b.ToTable("Puestos");
                 });
 
             modelBuilder.Entity("Domain.Entities.Rol", b =>
                 {
-                    b.Property<int>("ID_Rol")
+                    b.Property<int>("PkRol")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID_Rol"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PkRol"));
 
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID_Rol");
+                    b.HasKey("PkRol");
 
                     b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("Domain.Entities.Usuario", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("PkUsuario")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PkUsuario"));
 
                     b.Property<DateTime>("FechaRegistro")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("IDEmpleado")
+                    b.Property<int?>("FkEmpleado")
                         .HasColumnType("int");
 
-                    b.Property<int?>("IDRol")
+                    b.Property<int?>("FkRol")
                         .HasColumnType("int");
 
                     b.Property<string>("Password")
@@ -204,13 +203,11 @@ namespace Proyecto25AM.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("PkUsuario");
 
-                    b.HasIndex("IDEmpleado")
-                        .IsUnique()
-                        .HasFilter("[IDEmpleado] IS NOT NULL");
+                    b.HasIndex("FkEmpleado");
 
-                    b.HasIndex("IDRol");
+                    b.HasIndex("FkRol");
 
                     b.ToTable("Usuarios");
                 });
@@ -219,41 +216,39 @@ namespace Proyecto25AM.Migrations
                 {
                     b.HasOne("Domain.Entities.Departamento", "Departamento")
                         .WithMany()
-                        .HasForeignKey("IdDepartamento");
+                        .HasForeignKey("FkDepartamento");
+
+                    b.HasOne("Domain.Entities.Puesto", "Puesto")
+                        .WithMany()
+                        .HasForeignKey("FkPuesto");
 
                     b.Navigation("Departamento");
+
+                    b.Navigation("Puesto");
                 });
 
             modelBuilder.Entity("Domain.Entities.Factura", b =>
                 {
-                    b.HasOne("Domain.Entities.Cliente", "cliente")
+                    b.HasOne("Domain.Entities.Cliente", "Cliente")
                         .WithMany()
-                        .HasForeignKey("clienteID_Cliente")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("FkCliente");
 
-                    b.Navigation("cliente");
+                    b.Navigation("Cliente");
                 });
 
             modelBuilder.Entity("Domain.Entities.Usuario", b =>
                 {
                     b.HasOne("Domain.Entities.Empleado", "Empleado")
-                        .WithOne("Usuario")
-                        .HasForeignKey("Domain.Entities.Usuario", "IDEmpleado");
+                        .WithMany()
+                        .HasForeignKey("FkEmpleado");
 
                     b.HasOne("Domain.Entities.Rol", "Rol")
                         .WithMany()
-                        .HasForeignKey("IDRol");
+                        .HasForeignKey("FkRol");
 
                     b.Navigation("Empleado");
 
                     b.Navigation("Rol");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Empleado", b =>
-                {
-                    b.Navigation("Usuario")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

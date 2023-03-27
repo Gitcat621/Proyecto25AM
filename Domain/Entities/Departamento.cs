@@ -10,7 +10,7 @@ namespace Domain.Entities
     public class Departamento
     {
         [Key]
-        public int ID_Departamento { get; set; }
+        public int PkDepartamento { get; set; }
         public string Nombre { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace Proyecto25AM.Controllers
             _empleadoServices = empleadoServices;
         }
 
-        [HttpPost]
+        [HttpPost("Crear")]
         public async Task<IActionResult> Crear([FromBody] EmpleadoResponse i)
         {
             return Ok(await _empleadoServices.NuevaEmpleado(i));
@@ -28,19 +28,19 @@ namespace Proyecto25AM.Controllers
             return Ok(await _empleadoServices.ObtenerEmpleado());
         }
 
-        [HttpPut]
+        [HttpPut("Editar/{ID}")]
         public async Task<IActionResult> EditarEmpleado([FromBody] EmpleadoResponse request, int Id)
         {
             return Ok(await _empleadoServices.EditarEmpleado(request, Id));
         }
 
-        [HttpGet("BuscarPorID")]
+        [HttpGet("ByID/{ID}")]
         public async Task<IActionResult> EmpleadoPorID(int Id)
         {
             return Ok(await _empleadoServices.EmpleadoPorID(Id));
         }
 
-        [HttpDelete]
+        [HttpDelete("Borrar/{ID}")]
         public async Task<IActionResult> BorrarEmpleado(int Id)
         {
             return Ok(await _empleadoServices.BorrarEmpleado(Id));

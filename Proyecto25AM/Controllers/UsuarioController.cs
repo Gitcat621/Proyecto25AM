@@ -34,7 +34,7 @@ namespace Proyecto25AM.Controllers
             return Ok(await _usuarioServices.EditUser(request, Id));
         }
 
-        [HttpGet("BuscarPorID/{ID}")]
+        [HttpGet("ByID/{ID}")]
         public async Task<IActionResult> GetUserbyID(int Id)
         {
             return Ok(await _usuarioServices.GetUserbyID(Id));

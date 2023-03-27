@@ -10,7 +10,7 @@ namespace Domain.Entities
     public class Cliente
     {
         [Key]
-        public int ID_Cliente { get; set; }
+        public int PkCliente { get; set; }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string Telefono { get; set; }

@@ -34,8 +34,8 @@ namespace Proyecto25AM.Services.Services
                     User = request.User,
                     Password = request.Password,
                     FechaRegistro = request.FechaRegistro,
-                    IDEmpleado = request.IDEmpleado,
-                    IDRol = request.IDRol
+                    FkEmpleado = request.FkEmpleado,
+                    FkRol = request.FkRol
                 };
 
                 _context.Usuarios.Add(user);
@@ -80,7 +80,8 @@ namespace Proyecto25AM.Services.Services
             {
                 mensaje = "La lista de usuarios";
 
-                var response = await _context.Usuarios.ToListAsync();
+               var response = await _context.Usuarios.Include(z => z.Empleado).Include(x => x.Rol).ToListAsync();
+
 
                 if (response.Count > 0)
                 {
@@ -145,8 +146,8 @@ namespace Proyecto25AM.Services.Services
                 consult.User = request.User;
                 consult.Password = request.Password;
                 consult.FechaRegistro = request.FechaRegistro;
-                consult.IDEmpleado = request.IDEmpleado;
-                consult.IDRol = request.IDRol;
+                consult.FkEmpleado = request.FkEmpleado;
+                consult.FkRol = request.FkRol;
 
 
                 _context.Entry(consult).State = EntityState.Modified;

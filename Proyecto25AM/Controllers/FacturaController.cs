@@ -16,7 +16,7 @@ namespace Proyecto25AM.Controllers
             _facturaServices = facturaServices;
         }
 
-        [HttpPost]
+        [HttpPost("Crear")]
         public async Task<IActionResult> NuevaFactura([FromBody] FacturaResponse i)
         {
             return Ok(await _facturaServices.NuevaFactura(i));
@@ -28,19 +28,19 @@ namespace Proyecto25AM.Controllers
             return Ok(await _facturaServices.ObtenerFactura());
         }
 
-        [HttpPut]
+        [HttpPut("Editar/{ID}")]
         public async Task<IActionResult> EditarFactura([FromBody] FacturaResponse request, int Id)
         {
             return Ok(await _facturaServices.EditarFactura(request, Id));
         }
 
-        [HttpGet("BuscarPorID")]
+        [HttpGet("ByID/{ID}")]
         public async Task<IActionResult> FacturaPorID(int Id)
         {
             return Ok(await _facturaServices.FacturaPorID(Id));
         }
 
-        [HttpDelete]
+        [HttpDelete("Borrar/{ID}")]
         public async Task<IActionResult> BorrarFactura(int Id)
         {
             return Ok(await _facturaServices.BorrarFactura(Id));

@@ -29,8 +29,8 @@ namespace Proyecto25AM.Services.Services
                     Apellidos = request.Apellidos,
                     Direccion = request.Direccion,
                     Ciudad = request.Ciudad,
-                    IDPuesto = request.IDPuesto,
-                    IdDepartamento = request.IdDepartamento,
+                    FkPuesto = request.FkPuesto,
+                    FkDepartamento = request.FkDepartamento,
                 };
 
                 _context.Empleados.Add(empleado);
@@ -55,7 +55,7 @@ namespace Proyecto25AM.Services.Services
             {
                 mensaje = "Registro de empleados";
 
-                var response = await _context.Empleados.ToListAsync();
+                var response = await _context.Empleados.Include(x => x.Puesto).Include(z => z.Departamento).ToListAsync();
 
                 if (response.Count > 0)
                 {
@@ -126,8 +126,8 @@ namespace Proyecto25AM.Services.Services
                 consult.Apellidos = request.Apellidos;
                 consult.Direccion = request.Direccion;
                 consult.Ciudad = request.Ciudad;
-                consult.IDPuesto = request.IDPuesto;
-                consult.IdDepartamento = request.IdDepartamento;
+                consult.FkPuesto = request.FkPuesto;
+                consult.FkDepartamento = request.FkDepartamento;
 
                 _context.Entry(consult).State = EntityState.Modified;
                 await _context.SaveChangesAsync();

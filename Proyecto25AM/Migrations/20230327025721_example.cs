@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Proyecto25AM.Migrations
 {
     /// <inheritdoc />
-    public partial class sample : Migration
+    public partial class example : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,7 +15,7 @@ namespace Proyecto25AM.Migrations
                 name: "Clientes",
                 columns: table => new
                 {
-                    ID_Cliente = table.Column<int>(type: "int", nullable: false)
+                    PkCliente = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -25,142 +25,148 @@ namespace Proyecto25AM.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Clientes", x => x.ID_Cliente);
+                    table.PrimaryKey("PK_Clientes", x => x.PkCliente);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Departamentos",
                 columns: table => new
                 {
-                    ID_Departamento = table.Column<int>(type: "int", nullable: false)
+                    PkDepartamento = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Departamentos", x => x.ID_Departamento);
+                    table.PrimaryKey("PK_Departamentos", x => x.PkDepartamento);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Puestos",
                 columns: table => new
                 {
-                    ID_Puesto = table.Column<int>(type: "int", nullable: false)
+                    PkPuesto = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Puestos", x => x.ID_Puesto);
+                    table.PrimaryKey("PK_Puestos", x => x.PkPuesto);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
-                    ID_Rol = table.Column<int>(type: "int", nullable: false)
+                    PkRol = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Roles", x => x.ID_Rol);
+                    table.PrimaryKey("PK_Roles", x => x.PkRol);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Facturas",
                 columns: table => new
                 {
-                    NoFactura = table.Column<int>(type: "int", nullable: false)
+                    PkFactura = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RazonSocial = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Fecha = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RFC = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IDCliente = table.Column<int>(type: "int", nullable: true),
-                    clienteID_Cliente = table.Column<int>(type: "int", nullable: false)
+                    FkCliente = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Facturas", x => x.NoFactura);
+                    table.PrimaryKey("PK_Facturas", x => x.PkFactura);
                     table.ForeignKey(
-                        name: "FK_Facturas_Clientes_clienteID_Cliente",
-                        column: x => x.clienteID_Cliente,
+                        name: "FK_Facturas_Clientes_FkCliente",
+                        column: x => x.FkCliente,
                         principalTable: "Clientes",
-                        principalColumn: "ID_Cliente",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "PkCliente");
                 });
 
             migrationBuilder.CreateTable(
                 name: "Empleados",
                 columns: table => new
                 {
-                    ID_Empleado = table.Column<int>(type: "int", nullable: false)
+                    PkEmpleado = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Ciudad = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IDPuesto = table.Column<int>(type: "int", nullable: true),
-                    IdDepartamento = table.Column<int>(type: "int", nullable: true)
+                    FkPuesto = table.Column<int>(type: "int", nullable: true),
+                    FkDepartamento = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Empleados", x => x.ID_Empleado);
+                    table.PrimaryKey("PK_Empleados", x => x.PkEmpleado);
                     table.ForeignKey(
-                        name: "FK_Empleados_Departamentos_IdDepartamento",
-                        column: x => x.IdDepartamento,
+                        name: "FK_Empleados_Departamentos_FkDepartamento",
+                        column: x => x.FkDepartamento,
                         principalTable: "Departamentos",
-                        principalColumn: "ID_Departamento");
+                        principalColumn: "PkDepartamento");
+                    table.ForeignKey(
+                        name: "FK_Empleados_Puestos_FkPuesto",
+                        column: x => x.FkPuesto,
+                        principalTable: "Puestos",
+                        principalColumn: "PkPuesto");
                 });
 
             migrationBuilder.CreateTable(
                 name: "Usuarios",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    PkUsuario = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     User = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FechaRegistro = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IDEmpleado = table.Column<int>(type: "int", nullable: true),
-                    IDRol = table.Column<int>(type: "int", nullable: true)
+                    FkEmpleado = table.Column<int>(type: "int", nullable: true),
+                    FkRol = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuarios", x => x.ID);
+                    table.PrimaryKey("PK_Usuarios", x => x.PkUsuario);
                     table.ForeignKey(
-                        name: "FK_Usuarios_Empleados_IDEmpleado",
-                        column: x => x.IDEmpleado,
+                        name: "FK_Usuarios_Empleados_FkEmpleado",
+                        column: x => x.FkEmpleado,
                         principalTable: "Empleados",
-                        principalColumn: "ID_Empleado");
+                        principalColumn: "PkEmpleado");
                     table.ForeignKey(
-                        name: "FK_Usuarios_Roles_IDRol",
-                        column: x => x.IDRol,
+                        name: "FK_Usuarios_Roles_FkRol",
+                        column: x => x.FkRol,
                         principalTable: "Roles",
-                        principalColumn: "ID_Rol");
+                        principalColumn: "PkRol");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Empleados_IdDepartamento",
+                name: "IX_Empleados_FkDepartamento",
                 table: "Empleados",
-                column: "IdDepartamento");
+                column: "FkDepartamento");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Facturas_clienteID_Cliente",
+                name: "IX_Empleados_FkPuesto",
+                table: "Empleados",
+                column: "FkPuesto");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Facturas_FkCliente",
                 table: "Facturas",
-                column: "clienteID_Cliente");
+                column: "FkCliente");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Usuarios_IDEmpleado",
+                name: "IX_Usuarios_FkEmpleado",
                 table: "Usuarios",
-                column: "IDEmpleado",
-                unique: true,
-                filter: "[IDEmpleado] IS NOT NULL");
+                column: "FkEmpleado");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Usuarios_IDRol",
+                name: "IX_Usuarios_FkRol",
                 table: "Usuarios",
-                column: "IDRol");
+                column: "FkRol");
         }
 
         /// <inheritdoc />
@@ -168,9 +174,6 @@ namespace Proyecto25AM.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Facturas");
-
-            migrationBuilder.DropTable(
-                name: "Puestos");
 
             migrationBuilder.DropTable(
                 name: "Usuarios");
@@ -186,6 +189,9 @@ namespace Proyecto25AM.Migrations
 
             migrationBuilder.DropTable(
                 name: "Departamentos");
+
+            migrationBuilder.DropTable(
+                name: "Puestos");
         }
     }
 }

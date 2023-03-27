@@ -10,7 +10,7 @@ namespace Domain.Entities
     public class Puesto
     {
         [Key]
-        public int ID_Puesto { get; set; }
+        public int PkPuesto { get; set; }
         public string Nombre { get; set; }
     }
 }

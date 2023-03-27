@@ -16,7 +16,7 @@ namespace Proyecto25AM.Controllers
             _departamentoServices = departamentoServices;
         }
 
-        [HttpPost]
+        [HttpPost("Crear")]
         public async Task<IActionResult> Crear([FromBody] DepartamentoResponse i)
         {
             return Ok(await _departamentoServices.CrearDepartamento(i));
@@ -28,13 +28,13 @@ namespace Proyecto25AM.Controllers
             return Ok(await _departamentoServices.GetDepartamentos());
         }
 
-        [HttpPut]
+        [HttpPut("Editar/{ID}")]
         public async Task<IActionResult> EditDepartamento([FromBody] DepartamentoResponse request, int Id)
         {
             return Ok(await _departamentoServices.EditDepartamento(request, Id));
         }
 
-        [HttpDelete]
+        [HttpDelete("Borrar/{ID}")]
         public async Task<IActionResult> DeleteDepartamento(int Id)
         {
             return Ok(await _departamentoServices.DeleteDepartamento(Id));

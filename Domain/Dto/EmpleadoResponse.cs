@@ -14,8 +14,8 @@ namespace Domain.Dto
         public string Direccion { get; set; }
         public string Ciudad { get; set; }
 
-        public int? IDPuesto { get; set; }
-        public int? IdDepartamento { get; set; }
+        public int? FkPuesto { get; set; }
+        public int? FkDepartamento { get; set; }
 
 
     }

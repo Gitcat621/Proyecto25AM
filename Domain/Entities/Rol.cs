@@ -10,7 +10,7 @@ namespace Domain.Entities
     public class Rol
     {
         [Key]
-        public int ID_Rol { get; set; }
+        public int PkRol { get; set; }
         public string Nombre { get; set; }
         
     }

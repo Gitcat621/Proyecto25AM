@@ -16,7 +16,7 @@ namespace Proyecto25AM.Controllers
             _rolServices = rolServices;
         }
 
-        [HttpPost]
+        [HttpPost("Crear")]
         public async Task<IActionResult> Crear([FromBody] RolResponse i)
         {
             return Ok(await _rolServices.CrearRol(i));
@@ -28,13 +28,13 @@ namespace Proyecto25AM.Controllers
             return Ok(await _rolServices.GetRoles());
         }
 
-        [HttpPut]
+        [HttpPut("Editar/{ID}")]
         public async Task<IActionResult> EditRol([FromBody] RolResponse request, int Id)
         {
             return Ok(await _rolServices.EditRol(request, Id));
         }
 
-        [HttpDelete]
+        [HttpDelete("Borrar/{ID}")]
         public async Task<IActionResult> DeleteRol(int Id)
         {
             return Ok(await _rolServices.DeleteRol(Id));

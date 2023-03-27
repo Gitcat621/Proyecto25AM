@@ -17,7 +17,7 @@ namespace Proyecto25AM.Controllers
             _puestoServices = puestoServices;
         }
 
-        [HttpPost]
+        [HttpPost("Crear")]
         public async Task<IActionResult> CrearPuesto([FromBody] PuestoResponse i)
         {
             return Ok(await _puestoServices.CrearPuesto(i));
@@ -29,13 +29,13 @@ namespace Proyecto25AM.Controllers
             return Ok(await _puestoServices.GetPuestos());
         }
 
-        [HttpPut]
+        [HttpPut("Editar/{ID}")]
         public async Task<IActionResult> EditPuesto([FromBody] PuestoResponse request, int Id)
         {
             return Ok(await _puestoServices.EditPuesto(request, Id));
         }
 
-        [HttpDelete]
+        [HttpDelete("Borrar/{ID}")]
         public async Task<IActionResult> DeletePuesto(int Id)
         {
             return Ok(await _puestoServices.DeletePuesto(Id));

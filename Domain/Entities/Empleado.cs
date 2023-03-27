@@ -11,23 +11,20 @@ namespace Domain.Entities
     public class Empleado
     {
         [Key]
-        public int ID_Empleado { get; set; }
+        public int PkEmpleado { get; set; }
         [Required]
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string Direccion { get; set; }
         public string Ciudad { get; set; }
 
-
         [ForeignKey("Puesto")]
-        public int? IDPuesto { get; set; }
+        public int? FkPuesto { get; set; }
+        public Puesto Puesto { get; set; }
 
         [ForeignKey("Departamento")]
-        public int? IdDepartamento { get; set; }
-
-
+        public int? FkDepartamento { get; set; }
         public Departamento Departamento { get; set; }
-        public Usuario Usuario { get; set; }
 
 
 

@@ -15,7 +15,7 @@ namespace Domain.Dto
         public string RazonSocial { get; set; }
         public string Fecha { get; set; }
         public string RFC { get; set; }
-        public int? IDCliente { get; set; }
+        public int? FkCliente { get; set; }
 
 
 

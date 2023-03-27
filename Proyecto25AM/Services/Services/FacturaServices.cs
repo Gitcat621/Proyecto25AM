@@ -26,7 +26,7 @@ namespace Proyecto25AM.Services.Services
                     RazonSocial = request.RazonSocial,
                     Fecha = request.Fecha,
                     RFC = request.RFC,
-                    IDCliente = request.IDCliente,
+                    FkCliente = request.FkCliente,
                 };
 
                 _context.Facturas.Add(factura);
@@ -51,7 +51,7 @@ namespace Proyecto25AM.Services.Services
             {
                 mensaje = "Registro de facturas";
 
-                var response = await _context.Facturas.ToListAsync();
+                var response = await _context.Facturas.Include(x => x.Cliente).ToListAsync();
 
                 if (response.Count > 0)
                 {
@@ -121,7 +121,7 @@ namespace Proyecto25AM.Services.Services
                 consult.RazonSocial = request.RazonSocial;
                 consult.Fecha = request.Fecha;
                 consult.RFC = request.RFC;
-                consult.IDCliente = request.IDCliente;
+                consult.FkCliente = request.FkCliente;
                 _context.Entry(consult).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
                 mensaje = "Factura editada correctamente";

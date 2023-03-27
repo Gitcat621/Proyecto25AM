@@ -14,8 +14,8 @@ namespace Domain.Dto
         public string User { get; set; }
         public string Password { get; set; }
         public DateTime FechaRegistro { get; set; }
-        public int? IDEmpleado { get; set; }
-        public int? IDRol { get; set; }
+        public int? FkEmpleado { get; set; }
+        public int? FkRol { get; set; }
 
 
     }

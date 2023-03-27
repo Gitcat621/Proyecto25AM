@@ -11,18 +11,20 @@ namespace Domain.Entities
     public class Factura
     {
         [Key]
-        public int NoFactura { get; set; }
+        public int PkFactura { get; set; }
+
         [Required]
         public string RazonSocial { get; set; }
         [Required]
         public string Fecha { get; set; }
+
         [Required]
         public string RFC { get; set; }
 
         [ForeignKey("Cliente")]
-        public int? IDCliente { get; set; }
+        public int? FkCliente { get; set; }
 
-        public Cliente cliente { get; set; }
+        public Cliente Cliente { get; set; }
 
     }
 }
